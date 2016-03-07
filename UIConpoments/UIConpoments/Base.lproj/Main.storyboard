@@ -41,10 +41,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9Q-fE-nKb">
-                                <rect key="frame" x="50" y="110" width="117" height="30"/>
+                                <rect key="frame" x="50" y="110" width="88" height="30"/>
                                 <state key="normal" title="每日6000步"/>
                                 <connections>
                                     <segue destination="yOa-fo-xoE" kind="push" id="ldu-J0-0fx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7d-cj-ekU">
+                                <rect key="frame" x="55" y="148" width="83" height="30"/>
+                                <state key="normal" title="CoverImage"/>
+                                <connections>
+                                    <segue destination="GK4-0s-yP9" kind="push" id="hbN-DX-ElG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +62,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJd-7O-dBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="333" y="-330"/>
+        </scene>
+        <!--Table View Controller Cover-->
+        <scene sceneID="A0U-sh-17j">
+            <objects>
+                <tableViewController id="GK4-0s-yP9" customClass="TableViewControllerCover" customModule="UIConpoments" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GUM-Dd-jKr">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coverCell" id="Azt-fx-sc2">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azt-fx-sc2" id="4gf-71-Sm1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GK4-0s-yP9" id="ELM-gi-ta5"/>
+                            <outlet property="delegate" destination="GK4-0s-yP9" id="Vzt-4u-bfz"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="E1A-dz-FfD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="is3-DR-8IF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="380"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

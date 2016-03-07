@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerBtnStep: UIViewController {
     
     let screen = UIScreen.mainScreen().bounds
     let diameter: CGFloat = 88
